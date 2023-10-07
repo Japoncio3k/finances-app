@@ -1,7 +1,7 @@
-import { AxiosResponse } from 'axios';
 import { format, isWeekend, sub } from 'date-fns';
 import { DailyQueryResponse } from '../../data/rest/bovespa-stock.datamodel';
 import { BovespaStockDatasource } from '../../data/rest/bovespa-stock.datasource';
+import { RestRsponseModel } from '../../data/rest/rest-request.model';
 
 interface DailyPrice {
   open: number;
@@ -14,7 +14,7 @@ interface GetBovespaStockInput {
 }
 
 export const useGetBovespaStock = (props: GetBovespaStockInput) => {
-  const onCompleted = (data: AxiosResponse<DailyQueryResponse>) => {
+  const onCompleted = (data: RestRsponseModel<DailyQueryResponse>) => {
     let date = sub(new Date(), { days: 1 });
     while (isWeekend(date)) {
       date = sub(date, { days: 1 });

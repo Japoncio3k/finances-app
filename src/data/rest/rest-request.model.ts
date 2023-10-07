@@ -5,4 +5,4 @@ export interface RestRequestModelGet<Response> {
   onError?: (error: Error) => void;
 }
 
-export type RestRsponseModel<Response, Input> = AxiosResponse<Response, Input>;
+export type RestRsponseModel<Response, Input = null> = AxiosResponse<Response, Input>;
