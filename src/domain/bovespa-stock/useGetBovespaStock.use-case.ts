@@ -1,7 +1,5 @@
 import { format, isWeekend, sub } from 'date-fns';
-import { DailyQueryResponse } from '../../data/rest/bovespa-stock.datamodel';
-import { BovespaStockDatasource } from '../../data/rest/bovespa-stock.datasource';
-import { RestRsponseModel } from '../../data/rest/rest-request.model';
+import { BovespaStockDatasource, DailyQueryResponse, RestRsponseModel } from '../../data';
 
 interface DailyPrice {
   open: number;
