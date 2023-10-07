@@ -8,7 +8,6 @@
 import React from 'react';
 import type { PropsWithChildren } from 'react';
 import { SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, useColorScheme, View } from 'react-native';
-
 import {
   Colors,
   DebugInstructions,
@@ -16,9 +15,6 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import { restRequest } from './core';
-import { BovespaStockDatasource } from './data/rest/bovespa-stock.datasource';
-import { useGetBovespaStock } from './domain/bovespa-stock/useGetBovespaStock.use-case';
 
 type SectionProps = PropsWithChildren<{
   title: string;

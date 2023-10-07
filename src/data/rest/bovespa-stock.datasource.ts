@@ -1,6 +1,6 @@
-import { restRequest } from '../../core';
 import { DailyQueryResponse } from './bovespa-stock.datamodel';
 import { RestRequestModelGet } from './rest-request.model';
+import { restRequest } from '../../core';
 
 export const BovespaStockDatasource = (props: RestRequestModelGet<DailyQueryResponse>) => {
   const getDaily = (ticker: string) => {
