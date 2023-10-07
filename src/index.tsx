@@ -15,12 +15,14 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import { useGetBovespaStock } from './domain/bovespa-stock/useGetBovespaStock.use-case';
 
 type SectionProps = PropsWithChildren<{
   title: string;
 }>;
 
 const Section = ({ children, title }: SectionProps) => {
+  useGetBovespaStock({ onCompleted: console.log, onError: console.log });
   const isDarkMode = useColorScheme() === 'dark';
   return (
     <View style={styles.sectionContainer}>
